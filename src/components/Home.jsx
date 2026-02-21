@@ -6,10 +6,12 @@ import UpcomingEvents from './UpcomingEvents';
 import RecentEvent from './RecentEvent';
 import RecentProjects from './RecentProjects';
 import { CommitteeSection } from './Committee';
+import WelcomePopup from './WelcomePopup';
 
 const Home = () => {
     return (
         <>
+            <WelcomePopup />
             <Hero />
             <About />
             <Stats />
