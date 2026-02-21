@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="logo footer-logo">
                         <img src={stsLogoWhite} alt="STS" className="footer-logo-img" />
                         <div className="divider-vertical"></div>
-                        <img src={uniLogo} alt="University of Colombo" className="footer-uni-logo" />
+                        <img src={uniLogo} alt="Sabaragamuwa University of Sri Lanka" className="footer-uni-logo" />
                     </div>
                     <p className="footer-about">
                         Empowering the next generation of tech leaders through innovation, collaboration, and excellence.
@@ -37,9 +37,10 @@ const Footer = () => {
 
                 <div className="footer-col">
                     <h4>Contact Us</h4>
-                    <p>Faculty of Science</p>
-                    <p>University of Colombo</p>
-                    <p className="email-link"><Mail size={16} /> contact@sts.cmb.ac.lk</p>
+                    <p>Department of Physical Science and Technology</p>
+                    <p>Faculty of Applied Sciences</p>
+                    <p>Sabaragamuwa University of Sri Lanka</p>
+                    <p className="email-link"><Mail size={16} /> sts@sci.sab.ac.lk</p>
                 </div>
             </div>
             <div className="footer-bottom">

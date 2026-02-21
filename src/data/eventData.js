@@ -29,7 +29,7 @@ export const eventData = {
             'undergraduates deliver motivational talks to encourage the students ahead of their examinations.',
         coverImage:
             'https://images.unsplash.com/photo-1544531835-3a9d08e7c10d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        location: 'Department Laboratories, Sabaragamuwa University',
+        location: 'Department Laboratories, Faculty of Applied Sciences, Sabaragamuwa University of Sri Lanka',
         frequency: 'Annual',
         category: 'Education Outreach',
         editions: [
@@ -259,7 +259,7 @@ export const eventData = {
             'panel of industry experts. Winners receive seed funding and mentorship to develop their ideas.',
         coverImage:
             'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        location: 'Auditorium, Sabaragamuwa University',
+        location: 'Auditorium, Sabaragamuwa University of Sri Lanka',
         frequency: 'Annual',
         category: 'Innovation',
         editions: [

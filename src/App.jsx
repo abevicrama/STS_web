@@ -14,6 +14,7 @@ import AlumniRegister from './components/AlumniRegister';
 import AlumniUpdateProfile from './components/AlumniUpdateProfile';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import ScrollToTop from './components/ScrollToTop';
 import './index.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <LoadingScreen />
       ) : (
         <Router>
+          <ScrollToTop />
           <div className="app-container">
             <Navbar theme={theme} toggleTheme={toggleTheme} />
             <Routes>
