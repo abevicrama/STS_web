@@ -18,11 +18,11 @@ const Footer = () => {
                         Empowering the next generation of tech leaders through innovation, collaboration, and excellence.
                     </p>
                     <div className="social-links">
-                        <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
+                        <a href="https://www.facebook.com/sts.susl" aria-label="Facebook"><Facebook size={20} /></a>
 
                         <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
-                        <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                        <a href="sts@sci.sab.ac.lk" aria-label="Email"><Mail size={20} /></a>
+                        <a href="https://www.linkedin.com/company/society-of-technological-studies-sts/" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                        <a href="mailto:sts@sci.sab.ac.lk" aria-label="Email"><Mail size={20} /></a>
                     </div>
                 </div>
 
