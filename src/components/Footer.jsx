@@ -22,6 +22,7 @@ const Footer = () => {
 
                         <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
                         <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                        <a href="sts@sci.sab.ac.lk" aria-label="Email"><Mail size={20} /></a>
                     </div>
                 </div>
 
@@ -36,11 +37,11 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-col">
-                    <h4>Contact Us</h4>
+                    <h4>Other Links</h4>
                     <p><a href='https://www.sab.ac.lk/app/physical-sciences-and-technologies'>Department of Physical Sciences and Technology</a></p>
                     <p><a href='https://www.sab.ac.lk/app/'>Faculty of Applied Sciences</a></p>
                     <p><a href='https://www.sab.ac.lk'>Sabaragamuwa University of Sri Lanka</a></p>
-                    <p className="email-link"><Mail size={16} /> sts@sci.sab.ac.lk</p>
+
                 </div>
             </div>
             <div className="footer-bottom">
