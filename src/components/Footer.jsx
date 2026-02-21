@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 import stsLogoWhite from '../assets/images/logo/sts_logo_white.png';
 import uniLogo from '../assets/images/logo/susl_log.png';
 
@@ -19,7 +19,7 @@ const Footer = () => {
                     </p>
                     <div className="social-links">
                         <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-                        <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
+
                         <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
                         <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
                     </div>
