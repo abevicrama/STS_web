@@ -1,0 +1,67 @@
+[
+    {
+        "id": "alu001",
+        "name": "Kasun Perera",
+        "email": "kasun.perera@sts.ac.lk",
+        "password": "1234",
+        "batch": "2017/18",
+        "role": "Software Engineer",
+        "company": "WSO2 Lanka (Pvt) Ltd",
+        "location": "Colombo, Sri Lanka",
+        "linkedin": "https://linkedin.com/in/kasunperera",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "testimonial": "STS shaped my analytical thinking and gave me the confidence to tackle real-world engineering challenges."
+    },
+    {
+        "id": "alu002",
+        "name": "Sachini Fernando",
+        "email": "sachini.fernando@sts.ac.lk",
+        "password": "1234",
+        "batch": "2018/19",
+        "role": "Data Scientist",
+        "company": "Dialog Axiata PLC",
+        "location": "Colombo, Sri Lanka",
+        "linkedin": "https://linkedin.com/in/sachinifernando",
+        "image": "https://randomuser.me/api/portraits/women/44.jpg",
+        "testimonial": "The research culture at STS gave me the foundation I needed to pursue data science professionally."
+    },
+    {
+        "id": "alu003",
+        "name": "Dinesh Bandara",
+        "email": "dinesh.bandara@sts.ac.lk",
+        "password": "1234",
+        "batch": "2016/17",
+        "role": "Lecturer",
+        "company": "University of Sabaragamuwa",
+        "location": "Belihuloya, Sri Lanka",
+        "linkedin": "https://linkedin.com/in/dineshbandara",
+        "image": "https://randomuser.me/api/portraits/men/56.jpg",
+        "testimonial": "Giving back to the department that built me has been the most rewarding chapter of my career."
+    },
+    {
+        "id": "alu004",
+        "name": "Nimesha Rajapaksa",
+        "email": "nimesha.rajapaksa@sts.ac.lk",
+        "password": "1234",
+        "batch": "2019/20",
+        "role": "Biomedical Researcher",
+        "company": "Sri Lanka Institute of Nanotechnology",
+        "location": "Homagama, Sri Lanka",
+        "linkedin": "https://linkedin.com/in/nimesharajapaksa",
+        "image": "https://randomuser.me/api/portraits/women/68.jpg",
+        "testimonial": "STS opened my eyes to the intersection of physical sciences and cutting-edge technology."
+    },
+    {
+        "id": "alu005",
+        "name": "Tharaka Dissanayake",
+        "email": "tharaka.dissanayake@sts.ac.lk",
+        "password": "1234",
+        "batch": "2015/16",
+        "role": "Product Manager",
+        "company": "Sysco LABS Sri Lanka",
+        "location": "Colombo, Sri Lanka",
+        "linkedin": "https://linkedin.com/in/tharakadissanayake",
+        "image": "https://randomuser.me/api/portraits/men/90.jpg",
+        "testimonial": "Leading cross-functional teams became natural after the collaborative projects and society events at STS."
+    }
+]

@@ -1,0 +1,235 @@
+/* Alumni Page Styles */
+.alumni-page {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.alumni-hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.alumni-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.alumni-hero p {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid */
+.alumni-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 4rem;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+/* Card */
+.alumni-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    overflow: hidden;
+}
+
+.alumni-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alumni-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: var(--primary-color);
+}
+
+.alumni-image-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.alumni-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    padding: 3px;
+    background: var(--card-bg);
+}
+
+.linkedin-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #0077b5;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.linkedin-btn:hover {
+    transform: scale(1.1);
+}
+
+.alumni-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.alumni-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.alumni-batch {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+}
+
+.alumni-quote {
+    position: relative;
+    padding: 1rem;
+    background: rgba(var(--primary-rgb), 0.05);
+    border-radius: 10px;
+}
+
+.alumni-quote p {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.quote-icon-start {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: var(--primary-color);
+    opacity: 0.3;
+}
+
+.quote-icon-end {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    color: var(--primary-color);
+    opacity: 0.3;
+    transform: rotate(180deg);
+}
+
+/* CTA Section */
+.alumni-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--card-bg);
+    margin-top: 4rem;
+}
+
+.alumni-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.alumni-cta p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.join-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.join-btn--primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.alumni-cta-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.join-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Buttons placed inside the hero banner */
+.alumni-hero-btns {
+    margin-top: 24px;
+}
+
+.join-btn--outline {
+    border-color: rgba(255,255,255,0.65);
+    color: #fff;
+}
+.join-btn--outline:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .alumni-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .alumni-hero {
+        clip-path: none;
+    }
+}

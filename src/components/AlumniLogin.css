@@ -1,0 +1,133 @@
+/* AlumniLogin.css */
+.al-page {
+    min-height: 100vh;
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    padding-bottom: 60px;
+}
+
+.al-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    position: relative;
+}
+
+.al-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--primary-color);
+    margin-bottom: 28px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.al-back:hover { opacity: 1; }
+
+.al-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.al-card h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 6px;
+    color: var(--text-color);
+}
+
+.al-sub {
+    font-size: 0.9rem;
+    opacity: 0.55;
+    margin: 0 0 28px;
+}
+
+.al-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #ef4444;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.al-form { display: flex; flex-direction: column; gap: 18px; }
+
+.al-field { display: flex; flex-direction: column; gap: 6px; }
+
+.al-field label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.75;
+}
+
+.al-field input,
+.al-field textarea,
+.al-field select {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 0.92rem;
+    color: var(--text-color);
+    font-family: inherit;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+.al-field input:focus,
+.al-field textarea:focus,
+.al-field select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.al-btn-primary {
+    margin-top: 6px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+}
+.al-btn-primary:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+.al-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.al-hint {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+.al-hint a { color: var(--primary-color); font-weight: 600; }
+
+@media (max-width: 480px) {
+    .al-card { padding: 28px 20px; margin: 0 16px; }
+}

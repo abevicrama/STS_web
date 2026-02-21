@@ -1,0 +1,251 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-size: 1.2rem; /* Reduced from 1.5rem for longer text */
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap; /* Prevent wrapping on larger screens */
+  margin-left: 10px;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+/* Fallback for gap not working in some environments or layout quirks */
+.nav-links > a,
+.nav-links > .dropdown-container {
+  margin: 0 1rem;
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-trigger {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.dropdown-trigger:hover {
+  color: var(--primary-color);
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--card-bg);
+  min-width: 220px;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+  padding: 12px 20px;
+  display: block;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu a::after {
+  display: none; /* Remove underline effect from main links */
+}
+
+.dropdown-menu a:hover {
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--primary-color);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* GPA Calculator Button */
+.gpa-btn {
+  background: rgba(var(--primary-rgb), 0.12);
+  border: 1px solid rgba(var(--primary-rgb), 0.3);
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.gpa-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--bg-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed to start for scrolling if needed */
+    padding-top: 2rem;
+    gap: 1.5rem; /* Increased gap for better spacing */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .logo h1 {
+    font-size: 0.9rem;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 180px;
+  }
+
+  .logo-img {
+      height: 40px;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-btn {
+    display: block; /* Show on mobile */
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    display: none; /* Hidden by default in mobile, toggled via state in real app, simplified here */
+    padding: 0;
+  }
+  
+  /* Simple mobile dropdown handling: always show items for now or require click */
+  .dropdown-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-menu.show {
+     display: flex;
+     transform: none;
+  }
+}

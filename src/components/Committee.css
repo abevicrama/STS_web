@@ -1,0 +1,344 @@
+/* =====================================================
+   Committee Page — scoped styles (com-*)
+   ===================================================== */
+
+/* ---- Page ---- */
+.com-page {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding-bottom: 72px;
+}
+
+/* ---- Hero ---- */
+.com-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 55%, #0f3460 100%);
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.com-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(88,166,255,0.12) 0%, transparent 70%);
+}
+.com-hero-inner { position: relative; z-index: 1; }
+.com-hero-icon {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 18px rgba(88,166,255,0.5));
+}
+.com-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 14px;
+}
+.com-hero p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ---- Container (archive page) ---- */
+.com-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---- Year section block ---- */
+.com-year-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: box-shadow 0.25s;
+}
+.com-year-block:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+.com-year-block--latest {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(88,166,255,0.18);
+}
+
+/* ---- Year header (accordion trigger) ---- */
+.com-year-header {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 28px;
+    text-align: left;
+    transition: background 0.2s;
+}
+.com-year-header:hover { background: rgba(var(--primary-rgb, 88,166,255), 0.06); }
+
+.com-year-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.com-current-tag {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.com-year-badge {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+/* Short academic year pill on each member card e.g. "20/21" */
+.com-acad-badge {
+    display: inline-block;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    opacity: 0.55;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.com-year-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.com-year-toggle {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/* ---- Year body ---- */
+.com-year-body {
+    padding: 0 28px 32px;
+    animation: body-in 0.25s ease;
+}
+@keyframes body-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Member grid */
+.com-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+/* ---- Member card ---- */
+.com-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+}
+.com-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+
+/* Avatar */
+.com-avatar-wrap {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(88,166,255,0.15);
+    flex-shrink: 0;
+}
+.com-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Role badge pill */
+.com-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(var(--primary-rgb, 88,166,255), 0.12);
+    color: var(--primary-color);
+    border: 1px solid rgba(var(--primary-rgb, 88,166,255), 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.com-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.com-degree {
+    font-size: 0.82rem;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.com-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    word-break: break-all;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+.com-email:hover { opacity: 1; text-decoration: underline; }
+
+/* ---- Faculty Advisor (Senior Treasurer) ---- */
+.com-faculty-row {
+    margin-top: 28px;
+}
+.com-faculty-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.com-faculty-divider::before,
+.com-faculty-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+.com-faculty-divider span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: 0.45;
+    white-space: nowrap;
+}
+.com-faculty-card-wrap {
+    display: flex;
+    justify-content: center;
+}
+.com-card--faculty {
+    border-style: dashed;
+    max-width: 260px;
+    opacity: 0.9;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .com-hero h1     { font-size: 2rem; }
+    .com-year-header { padding: 16px 18px; }
+    .com-year-body   { padding: 0 16px 24px; }
+    .com-grid        { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+    .com-grid { grid-template-columns: 1fr; }
+}
+
+/* ======================================================
+   Home page section — CommitteeSection
+   ====================================================== */
+.com-home-section {
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    padding: 64px 28px 80px;
+}
+
+.com-home-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.com-home-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.com-home-header h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    margin: 0 0 6px;
+}
+
+.com-home-sub {
+    font-size: 0.95rem;
+    opacity: 0.55;
+    margin: 0;
+}
+
+.com-former-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid rgba(var(--primary-rgb, 88,166,255), 0.4);
+    padding: 8px 18px;
+    border-radius: 24px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.com-former-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.com-home-grid {
+    /* same auto-fill grid but cards are a touch wider on home */
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+@media (max-width: 600px) {
+    .com-home-section  { padding: 40px 18px 56px; }
+    .com-home-header   { flex-direction: column; align-items: flex-start; }
+    .com-home-grid     { grid-template-columns: 1fr 1fr; }
+}
+

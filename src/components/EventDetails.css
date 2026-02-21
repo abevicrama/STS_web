@@ -1,0 +1,501 @@
+/* ======================================================
+   EventDetails — scoped styles (evd-*)
+   ====================================================== */
+
+/* ---- Page shell ---- */
+.evd-page {
+    color: var(--text-color);
+    background: var(--bg-color);
+    min-height: 100vh;
+}
+
+/* ---- Hero ---- */
+.evd-hero {
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.evd-hero-overlay {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.75) 100%);
+    padding: 32px 48px 56px;
+}
+
+.evd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    margin-bottom: auto;
+    width: fit-content;
+}
+.evd-back:hover { color: #fff; }
+
+.evd-hero-content {
+    margin-top: 24px;
+}
+
+.evd-category-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.evd-hero-content h1 {
+    font-size: 3.2rem;
+    color: #fff;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.evd-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+}
+
+.evd-hero-meta {
+    display: flex;
+    gap: 24px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+.evd-hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ---- About ---- */
+.evd-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.evd-about {
+    padding: 60px 0;
+    background: var(--card-bg);
+}
+
+.evd-about h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: var(--text-color);
+}
+.evd-about h2 .highlight { color: var(--primary-color); }
+
+.evd-about p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--text-color);
+    opacity: 0.85;
+    max-width: 780px;
+}
+
+/* ---- Edition cards ---- */
+.evd-editions-section {
+    padding: 64px 0;
+}
+
+.evd-section-title {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.evd-section-sub {
+    opacity: 0.6;
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+}
+
+.evd-edition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.evd-edition-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px 22px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.evd-edition-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.ecard-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.ecard-year {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+.ecard-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+.ecard-stats span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ecard-see-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary-color);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+/* ---- Not found ---- */
+.evd-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 16px;
+    opacity: 0.6;
+}
+.evd-back-home {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ======================================================
+   Edition Modal
+   ====================================================== */
+.emodal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow-y: auto;
+    backdrop-filter: blur(4px);
+}
+
+.emodal {
+    background: var(--bg-color);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 780px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    overflow: hidden;
+    animation: emodal-in 0.28s ease;
+}
+
+@keyframes emodal-in {
+    from { opacity: 0; transform: translateY(24px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.emodal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--card-bg);
+}
+
+.emodal-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.emodal-header h2 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.emodal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    padding: 4px;
+    border-radius: 6px;
+    transition: opacity 0.2s, background 0.2s;
+    flex-shrink: 0;
+}
+.emodal-close:hover { opacity: 1; background: var(--border-color); }
+
+.emodal-body {
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Stats strip */
+.emodal-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 18px 22px;
+    border: 1px solid var(--border-color);
+}
+
+.estat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 80px;
+}
+.estat-label {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.55;
+}
+.estat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+/* Section heading */
+.emodal-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Coordinator chips */
+.coord-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.coord-chip {
+    background: rgba(var(--primary-rgb, 88,166,255), 0.12);
+    color: var(--primary-color);
+    border: 1px solid rgba(var(--primary-rgb, 88,166,255), 0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Schools table */
+.schools-table {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.school-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.school-row:last-child { border-bottom: none; }
+.school-header {
+    background: var(--card-bg);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.65;
+}
+.school-total {
+    background: var(--card-bg);
+    font-weight: 700;
+}
+.stu-count {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    min-width: 44px;
+    text-align: center;
+}
+.school-total .stu-count {
+    font-size: 0.9rem;
+}
+
+/* Notes */
+.enotes {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    opacity: 0.85;
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Gallery grid */
+.egal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.egal-thumb {
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: var(--card-bg);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.egal-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.egal-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================================================
+   Lightbox
+   ====================================================== */
+.elightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.elightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 60px rgba(0,0,0,0.6);
+}
+.lb-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.lb-close:hover { background: rgba(255,255,255,0.2); }
+.lb-nav {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+}
+.lb-nav:hover { background: rgba(255,255,255,0.2); }
+.lb-nav:disabled { opacity: 0.25; cursor: not-allowed; }
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+.lb-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.5);
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* ======================================================
+   Responsive
+   ====================================================== */
+@media (max-width: 700px) {
+    .evd-hero-overlay  { padding: 20px 22px 40px; }
+    .evd-hero-content h1 { font-size: 2rem; }
+    .emodal-header { padding: 20px 20px 16px; }
+    .emodal-body   { padding: 20px; gap: 20px; }
+    .emodal-header h2 { font-size: 1.2rem; }
+    .lb-nav { display: none; }
+}

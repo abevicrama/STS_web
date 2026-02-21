@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #0ea5e9;
+  --bg-color: #ffffff;
+  --text-color: #0f172a;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: #f8fafc;
+  --border-color: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  --primary-color: #38bdf8;
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --card-bg: #1e293b;
+  --border-color: #334155;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

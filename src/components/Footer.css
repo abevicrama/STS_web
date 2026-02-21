@@ -1,0 +1,136 @@
+.footer {
+  background-color: #0f172a; /* Always dark footer */
+  color: #f8fafc;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-uni-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  /* background: white; Removed as per user request */
+  border-radius: 4px; /* Optional rounded corners */
+  padding: 2px;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-about {
+  opacity: 0.7;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: var(--primary-color);
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  opacity: 0.7;
+  transition: opacity 0.2s, padding-left 0.2s;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+  padding-left: 5px;
+  color: var(--primary-color);
+}
+
+.footer-col p {
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.email-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
