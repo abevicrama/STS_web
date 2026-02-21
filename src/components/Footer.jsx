@@ -37,9 +37,9 @@ const Footer = () => {
 
                 <div className="footer-col">
                     <h4>Contact Us</h4>
-                    <p>Department of Physical Science and Technology</p>
-                    <p>Faculty of Applied Sciences</p>
-                    <p>Sabaragamuwa University of Sri Lanka</p>
+                    <p><a href='https://www.sab.ac.lk/app/physical-sciences-and-technologies'>Department of Physical Sciences and Technology</a></p>
+                    <p><a href='https://www.sab.ac.lk/app/'>Faculty of Applied Sciences</a></p>
+                    <p><a href='https://www.sab.ac.lk'>Sabaragamuwa University of Sri Lanka</a></p>
                     <p className="email-link"><Mail size={16} /> sts@sci.sab.ac.lk</p>
                 </div>
             </div>
